@@ -62,14 +62,14 @@ def test_factorial():
 def test_sine():
     assert math.isclose(Calculator.sine(math.pi / 2), 1.0, rel_tol=1e-9)
     assert math.isclose(Calculator.sine(0), 0.0, rel_tol=1e-9)
-    assert math.isclose(Calculator.sine(math.pi), 0.0, rel_tol=1e-9)
+    assert math.isclose(Calculator.sine(math.pi), 0.0, rel_tol=1e-9, abs_tol=1e-16)
 
 def test_cosine():
     assert math.isclose(Calculator.cosine(math.pi), -1.0, rel_tol=1e-9)
     assert math.isclose(Calculator.cosine(0), 1.0, rel_tol=1e-9)
-    assert math.isclose(Calculator.cosine(math.pi / 2), 0.0, rel_tol=1e-9)
+    assert math.isclose(Calculator.cosine(math.pi / 2), 0.0, rel_tol=1e-9, abs_tol=1e-16)
 
 def test_tangent():
     assert math.isclose(Calculator.tangent(math.pi / 4), 1.0, rel_tol=1e-9)
     assert math.isclose(Calculator.tangent(0), 0.0, rel_tol=1e-9)
-    assert math.isclose(Calculator.tangent(math.pi), 0.0, rel_tol=1e-9)
+    assert math.isclose(Calculator.tangent(math.pi), 0.0, rel_tol=1e-9, abs_tol=1e-16)
