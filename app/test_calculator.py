@@ -1,3 +1,4 @@
+import math
 from .calculator import Calculator
 
 def test_add():
@@ -59,16 +60,16 @@ def test_factorial():
     assert Calculator.factorial(5.5) == 'Factorial is only defined for integers'
 
 def test_sine():
-    assert Calculator.sine(math.pi / 2) == 1.0
-    assert Calculator.sine(0) == 0.0
-    assert Calculator.sine(math.pi) == 1.2246467991473532e-16
+    assert math.isclose(Calculator.sine(math.pi / 2), 1.0, rel_tol=1e-9)
+    assert math.isclose(Calculator.sine(0), 0.0, rel_tol=1e-9)
+    assert math.isclose(Calculator.sine(math.pi), 0.0, rel_tol=1e-9)
 
 def test_cosine():
-    assert Calculator.cosine(math.pi) == -1.0
-    assert Calculator.cosine(0) == 1.0
-    assert Calculator.cosine(math.pi / 2) == 6.123233995736766e-17
+    assert math.isclose(Calculator.cosine(math.pi), -1.0, rel_tol=1e-9)
+    assert math.isclose(Calculator.cosine(0), 1.0, rel_tol=1e-9)
+    assert math.isclose(Calculator.cosine(math.pi / 2), 0.0, rel_tol=1e-9)
 
 def test_tangent():
-    assert Calculator.tangent(math.pi / 4) == 1.0
-    assert Calculator.tangent(0) == 0.0
-    assert Calculator.tangent(math.pi) == -1.2246467991473532e-16
+    assert math.isclose(Calculator.tangent(math.pi / 4), 1.0, rel_tol=1e-9)
+    assert math.isclose(Calculator.tangent(0), 0.0, rel_tol=1e-9)
+    assert math.isclose(Calculator.tangent(math.pi), 0.0, rel_tol=1e-9)
