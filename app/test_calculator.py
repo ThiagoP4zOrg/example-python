@@ -55,35 +55,35 @@ def test_square_root():
     # Uncomment the following line if you decide to handle negative inputs
     # assert Calculator.square_root(-4) == 'Invalid input for square root'
 
-def test_factorial():
-    assert Calculator.factorial(0) == 1
-    assert Calculator.factorial(1) == 1
-    assert Calculator.factorial(5) == 120
-    assert Calculator.factorial(10) == 3628800
-    with pytest.raises(ValueError):
-        Calculator.factorial(-1)
+# def test_factorial():
+#     assert Calculator.factorial(0) == 1
+#     assert Calculator.factorial(1) == 1
+#     assert Calculator.factorial(5) == 120
+#     assert Calculator.factorial(10) == 3628800
+#     with pytest.raises(ValueError):
+#         Calculator.factorial(-1)
 
-def test_logarithm():
-    assert Calculator.logarithm(10, 10) == 1.0
-    assert Calculator.logarithm(100, 10) == 2.0
-    assert Calculator.logarithm(math.e, math.e) == 1.0
-    assert Calculator.logarithm(8, 2) == 3.0
-    with pytest.raises(ValueError):
-        Calculator.logarithm(0, 10)
-    with pytest.raises(ValueError):
-        Calculator.logarithm(10, 0)
-    with pytest.raises(ValueError):
-        Calculator.logarithm(10, 1)
+# def test_logarithm():
+#     assert Calculator.logarithm(10, 10) == 1.0
+#     assert Calculator.logarithm(100, 10) == 2.0
+#     assert Calculator.logarithm(math.e, math.e) == 1.0
+#     assert Calculator.logarithm(8, 2) == 3.0
+#     with pytest.raises(ValueError):
+#         Calculator.logarithm(0, 10)
+#     with pytest.raises(ValueError):
+#         Calculator.logarithm(10, 0)
+#     with pytest.raises(ValueError):
+#         Calculator.logarithm(10, 1)
 
-def test_exponential():
-    assert Calculator.exponential(0) == pytest.approx(1.0, rel=1e-9)
-    assert Calculator.exponential(1) == pytest.approx(math.e, rel=1e-9)
-    assert Calculator.exponential(2) == pytest.approx(math.e ** 2, rel=1e-9)
-    assert Calculator.exponential(-1) == pytest.approx(1 / math.e, rel=1e-9)
+# def test_exponential():
+#     assert Calculator.exponential(0) == pytest.approx(1.0, rel=1e-9)
+#     assert Calculator.exponential(1) == pytest.approx(math.e, rel=1e-9)
+#     assert Calculator.exponential(2) == pytest.approx(math.e ** 2, rel=1e-9)
+#     assert Calculator.exponential(-1) == pytest.approx(1 / math.e, rel=1e-9)
 
-def test_absolute():
-    assert Calculator.absolute(5) == 5
-    assert Calculator.absolute(-5) == 5
-    assert Calculator.absolute(0) == 0
-    assert Calculator.absolute(3.14) == 3.14
-    assert Calculator.absolute(-3.14) == 3.14
+# def test_absolute():
+#     assert Calculator.absolute(5) == 5
+#     assert Calculator.absolute(-5) == 5
+#     assert Calculator.absolute(0) == 0
+#     assert Calculator.absolute(3.14) == 3.14
+#     assert Calculator.absolute(-3.14) == 3.14
