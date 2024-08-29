@@ -52,3 +52,10 @@ class Calculator:
     def tangent(x):
         return math.tan(math.radians(x))
 
+    def logarithm_base10(x):
+        if x <= 0:
+        raise ValueError("Logarithm undefined for non-positive values")
+        return math.log10(x)
+
+    def cube_root(x):
+        return x ** (1/3)
