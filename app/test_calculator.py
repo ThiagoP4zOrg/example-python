@@ -81,9 +81,11 @@ def test_exponential():
     assert Calculator.exponential(2) == pytest.approx(math.e ** 2, rel=1e-9)
     assert Calculator.exponential(-1) == pytest.approx(1 / math.e, rel=1e-9)
 
-# def test_absolute():
-#     assert Calculator.absolute(5) == 5
-#     assert Calculator.absolute(-5) == 5
-#     assert Calculator.absolute(0) == 0
-#     assert Calculator.absolute(3.14) == 3.14
-#     assert Calculator.absolute(-3.14) == 3.14
+def test_absolute():
+    assert Calculator.absolute(5) == 5
+    assert Calculator.absolute(-5) == 5
+    assert Calculator.absolute(0) == 0
+    assert Calculator.absolute(3.14) == 3.14
+    assert Calculator.absolute(-3.14) == 3.14
+
+#test
